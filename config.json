@@ -1,0 +1,6 @@
+{
+  "token": "token",
+
+  "add_damage_command_name": "add_dmg",
+  "get_gamage_command_name": "get_dmg"
+}
