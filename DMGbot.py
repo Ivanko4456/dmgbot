@@ -15,7 +15,7 @@ class DMGbot(commands.Bot):
 				file.write('{}')
 		self.dmgs = self.parse_file()
 		
-		@self.tree.command(name=cfg["add_damage_command_name"], description='Lorem ipsum')
+		@self.tree.command(name=cfg["add_damage_command_name"])
 		async def add_dmg_func(interaction, dmg: str):
 			self.dmgs = self.parse_file()
 			na = interaction.user.nick if interaction.user.nick is not None else interaction.user.name
