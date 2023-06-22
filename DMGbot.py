@@ -19,7 +19,7 @@ class DMGbot(commands.Bot):
 			with open('dmg.json', 'w') as file:
 				file.write('{}')
 				
-		@self.tree.command(name=cfg["add_damage_command_name"], description='Lorem ipsum')
+		@self.tree.command(name=cfg["add_damage_command_name"], description=cfg["add_damage_command_description"])
 		async def add_dmg_func(interaction, dmg: str):
 			self._dmgs = self.parse_file()
 			na = interaction.user.nick if interaction.user.nick is not None else interaction.user.name
@@ -46,7 +46,7 @@ class DMGbot(commands.Bot):
 			
 			return await interaction.response.send_message(f'✅{na}: {self.denormalizer(dm)}')
 		
-		@self.tree.command(name=cfg["get_gamage_command_name"])
+		@self.tree.command(name=cfg["get_gamage_command_name"], description=cfg["get_gamage_command_description"])
 		async def get_dmg_func(interaction):
 			self._dmgs = self.parse_file()
 			if len(self._dmgs):
